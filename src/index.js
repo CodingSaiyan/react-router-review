@@ -15,23 +15,7 @@ import Store from './components/Store'
 
 ReactDOM.render(
 <HashRouter>
-    <Switch>
-        <Route exact path="/" component={App} />
-        <Route path="/shopping" component={ShoppingList} />
-        <Route path="/animals" render={(props) => {
-            // console.log(props)
-            return (
-                <Animals {...props}>
-                    <Switch>
-                        <Route path="/animals/cats" component={Cats} />
-                        <Route path="/animals/pandas" component={Pandas} />
-                        <Route component={AnimalsLanding} />
-                    </Switch>
-                </Animals>
-            )
-        }} />
-        <Route path="/store/:id" component={Store} />
-    </Switch>
+    <App></App>
 </HashRouter>
 , document.getElementById('root'));
 // registerServiceWorker();
